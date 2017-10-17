@@ -8,7 +8,7 @@ int main()
 {
   /*Time to declare all the bits and bobs
 that I'll need for storing counts and strings*/
-float countWords = 0, countChars = 0;
+int countWords = 0, countChars = 0;
 string wordcount;
 double avg;
 string shortest, longest, word;
@@ -27,8 +27,7 @@ while(myinput  >> word)
     ++countWords;
     int len = word.size();
     countChars += word.size();
-    avg = countChars/countWords;
-    
+  
     /*calc the long and short*/
     if(word.size() > longest.size())
        longest = word;
@@ -36,7 +35,10 @@ while(myinput  >> word)
        shortest = word;
     
   }
-/* output the biz */
+/* convert to float and calc avg*/
+avg = ((1.0 * countChars)/((1.0 * countWords));
+       
+  /* output the biz */
 cout << "Longest is: " << longest << ", " << longest.size() << endl;
 cout << "Shortest is: " << shortest << ", " << shortest.size() << endl;
 cout << "Avg word len: " << avg  << endl;
